@@ -66,6 +66,11 @@
                                 {{ method_field('DELETE') }}
 
                                 <button>刪除任務</button>
+                                Route::delete('/task/{task}', function (Task $task) {
+                                $task->delete();
+
+                                return redirect('/');
+                                });
                             </form>
                             </td>
 
